@@ -34,15 +34,6 @@ public class registerUser extends AppCompatActivity {
         EditText eFullname = findViewById(R.id.eFullname);
         Button btnSignup = findViewById(R.id.btnsignup);
 
-        btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent btnlogin = new Intent(registerUser.this, loginUser.class);
-                startActivity(btnlogin);
-                finish();
-            }
-        });
-
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,9 +52,9 @@ public class registerUser extends AppCompatActivity {
             {
                 AlertDialog.Builder psn=new
                         AlertDialog.Builder(registerUser.this);
-                psn.setTitle("Konfirmasi");
-                psn.setMessage("Data Tersimpan");
-                psn.setIcon(R.drawable.ic_launcher_background);
+                psn.setTitle("saved data");
+                psn.setMessage("data added successfully");
+                psn.setIcon(R.drawable.ic_baseline_check_circle_24);
                 psn.setNeutralButton("OK",new
                         DialogInterface.OnClickListener()
                         {
@@ -71,8 +62,9 @@ public class registerUser extends AppCompatActivity {
                             public void onClick(DialogInterface
                                                         dialogInterface, int i) {
 
-                                Toast.makeText(getApplicationContext(),"Sukses simpan",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent btnlogin = new Intent(registerUser.this, loginUser.class);
+                                startActivity(btnlogin);
+                                finish();
                             }
                         });
                 psn.show();
