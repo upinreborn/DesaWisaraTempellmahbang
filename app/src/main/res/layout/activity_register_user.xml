@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/eFullname"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:hint="Full Name"
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/eUsername"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:hint="Username"
@@ -46,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/ePassword"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -61,10 +64,11 @@
         android:layout_below="@id/linearedittext"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="5dp"
-        android:text="Sign Up" />
+        android:text="Sign Up"
+        android:onClick="signup"/>
 
     <TextView
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnloginInRegister"
         android:layout_below="@id/btnsignup"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
