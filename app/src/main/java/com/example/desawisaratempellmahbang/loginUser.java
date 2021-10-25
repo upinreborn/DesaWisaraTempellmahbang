@@ -49,20 +49,26 @@ public class loginUser extends AppCompatActivity {
                 mPreferences=getSharedPreferences(mSharedPrefFile,
                         Activity.MODE_PRIVATE);
 
-                String uname = mPreferences.getString("Username",null);
 
-                String pwd = mPreferences.getString("Password",null);
+                if(mPreferences.getString("Username", null) == null || mPreferences.getString("Password",null)==null){
+                    Toast.makeText(getApplicationContext(),"data not found",Toast.LENGTH_SHORT).show();
+                }else {
 
-                if (uname.equals(eUsername.getText().toString()) && pwd.equals(ePassword.getText().toString())){
-                    Intent intent = new Intent(loginUser.this, MainActivity.class);
-                    startActivity(intent);
+                    String uname = mPreferences.getString("Username",null);
+                    String pwd = mPreferences.getString("Password",null);
+
+                    if (uname.equals(eUsername.getText().toString()) && pwd.equals(ePassword.getText().toString())){
+                        Intent intent = new Intent(loginUser.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else if(eUsername.getText().toString().equals("") || ePassword.getText().toString().equals("")){
+                        Toast.makeText(getApplicationContext(), "username and password must be filled", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Wrong username or Password", Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else if(eUsername.getText().toString().equals("") || ePassword.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "username and password must be filled", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Wrong username or Password", Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
     }
