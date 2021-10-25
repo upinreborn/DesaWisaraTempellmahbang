@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DesaWisaraTempellmahbang">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".registerUser"
             android:exported="true" />
         <activity
@@ -23,9 +26,6 @@
         </activity>
         <activity
             android:name=".loginUser"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true" />
     </application>
 

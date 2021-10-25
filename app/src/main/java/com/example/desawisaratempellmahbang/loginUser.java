@@ -36,7 +36,6 @@ public class loginUser extends AppCompatActivity {
             public void onClick(View v) {
                 Intent daftar = new Intent(loginUser.this, registerUser.class);
                 startActivity(daftar);
-                finish();
             }
         });
 
@@ -48,7 +47,7 @@ public class loginUser extends AppCompatActivity {
                         "com.example.desawisaratempellmahbang";
 
                 mPreferences=getSharedPreferences(mSharedPrefFile,
-                                Activity.MODE_PRIVATE);
+                        Activity.MODE_PRIVATE);
 
                 String uname = mPreferences.getString("Username",null);
 
@@ -57,7 +56,6 @@ public class loginUser extends AppCompatActivity {
                 if (uname.equals(eUsername.getText().toString()) && pwd.equals(ePassword.getText().toString())){
                     Intent intent = new Intent(loginUser.this, MainActivity.class);
                     startActivity(intent);
-                    finish();
                 }
                 else if(eUsername.getText().toString().equals("") || ePassword.getText().toString().equals("")){
                     Toast.makeText(getApplicationContext(), "username and password must be filled", Toast.LENGTH_SHORT).show();
