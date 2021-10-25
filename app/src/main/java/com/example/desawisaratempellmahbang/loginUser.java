@@ -49,7 +49,6 @@ public class loginUser extends AppCompatActivity {
                 mPreferences=getSharedPreferences(mSharedPrefFile,
                         Activity.MODE_PRIVATE);
 
-
                 if(mPreferences.getString("Username", null) == null || mPreferences.getString("Password",null)==null){
                     Toast.makeText(getApplicationContext(),"data not found",Toast.LENGTH_SHORT).show();
                 }else {
