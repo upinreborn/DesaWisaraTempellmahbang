@@ -49,12 +49,12 @@ public class loginUser extends AppCompatActivity {
                 mPreferences=getSharedPreferences(mSharedPrefFile,
                         Activity.MODE_PRIVATE);
 
-                if(mPreferences.getString("Username", null) == null || mPreferences.getString("Password",null)==null){
+                String uname = mPreferences.getString("Username",null);
+                String pwd = mPreferences.getString("Password",null);
+
+                if(uname == null || pwd==null){
                     Toast.makeText(getApplicationContext(),"data not found",Toast.LENGTH_SHORT).show();
                 }else {
-
-                    String uname = mPreferences.getString("Username",null);
-                    String pwd = mPreferences.getString("Password",null);
 
                     if (uname.equals(eUsername.getText().toString()) && pwd.equals(ePassword.getText().toString())){
                         Intent intent = new Intent(loginUser.this, MainActivity.class);

@@ -37,15 +37,21 @@ public class registerUser extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPreferences=getSharedPreferences(mSharedPrefFile,
-                        Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor=mPreferences.edit();
+                if (eUsername.getText().toString().equals("") ||
+                        ePassword.getText().toString().equals("") ||
+                        eFullname.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(),"data must be completed",Toast.LENGTH_SHORT).show();
+                } else{
+                    mPreferences=getSharedPreferences(mSharedPrefFile,
+                            Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=mPreferences.edit();
 
-                editor.putString("Username",eUsername.getText().toString());
-                editor.putString("Password",ePassword.getText().toString());
-                editor.putString("Fullname",eFullname.getText().toString());
-                editor.commit();
-                pesan();
+                    editor.putString("Username",eUsername.getText().toString());
+                    editor.putString("Password",ePassword.getText().toString());
+                    editor.putString("Fullname",eFullname.getText().toString());
+                    editor.commit();
+                    pesan();
+                }
             }
 
             private void pesan()
