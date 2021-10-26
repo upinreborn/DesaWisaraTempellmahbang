@@ -7,6 +7,7 @@
         <item>Village experience</item>
         <item>Cooking lesson</item>
         <item>Rafting</item>
+        <item>Farm field</item>
     </string-array>
     <string-array name="tours_price">
         <item>150000</item>
@@ -14,6 +15,7 @@
         <item>497500</item>
         <item>325000</item>
         <item>150000</item>
+        <item>50000</item>
     </string-array>
 
     <array name="tour_images">
@@ -22,5 +24,6 @@
         <item>@drawable/img_villagetour</item>
         <item>@drawable/img_cooking</item>
         <item>@drawable/img_rafting</item>
+        <item>@drawable/img_farmfield</item>
     </array>
 </resources>

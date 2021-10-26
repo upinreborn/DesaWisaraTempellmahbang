@@ -8,16 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DesaWisaraTempellmahbang" >
+        android:theme="@style/Theme.noActionbar_DesaWisaraTempellmahbang" >
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.actionbar_DesaWisaraTempellmahbang"/>
         <activity
             android:name=".registerUser"
             android:exported="true" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

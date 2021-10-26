@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/callCenter"
+        android:title="Call Center"
+        android:onClick="CallCenter"/>
+
+    <item
+        android:id="@+id/smsCenter"
+        android:title="Sms Center"
+        android:onClick="SmsCenter"/>
+
+    <item
+        android:id="@+id/lokasi"
+        android:title="Location"
+        android:onClick="Location"/>
+
+    <item
+        android:id="@+id/setting"
+        android:title="Account Setting"
+        android:onClick="setting"/>
+
+</menu>
