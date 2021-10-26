@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Desa Wisata Tempellmahbang</string>
+
+    <string-array name="tour_packages">
+        <item>Dokar village tour</item>
+        <item>Cycling tour</item>
+        <item>Village experience</item>
+        <item>Cooking lesson</item>
+        <item>Rafting</item>
+    </string-array>
+    <string-array name="tours_price">
+        <item>150000</item>
+        <item>150000</item>
+        <item>497500</item>
+        <item>325000</item>
+        <item>150000</item>
+    </string-array>
+
+    <array name="tour_images">
+        <item>@drawable/img_dokar</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_villagetour</item>
+        <item>@drawable/img_cooking</item>
+        <item>@drawable/img_rafting</item>
+    </array>
 </resources>
