@@ -37,6 +37,8 @@ public class registerUser extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //validasi jika username dan password belum pernah didaftarkan
                 if (eUsername.getText().toString().equals("") ||
                         ePassword.getText().toString().equals("") ||
                         eFullname.getText().toString().equals("")){
@@ -59,7 +61,7 @@ public class registerUser extends AppCompatActivity {
                 AlertDialog.Builder psn=new
                         AlertDialog.Builder(registerUser.this);
                 psn.setTitle("saved data");
-                psn.setMessage("data added successfully");
+                psn.setMessage("Data added successfully");
                 psn.setIcon(R.drawable.ic_baseline_check_circle_24);
                 psn.setNeutralButton("OK",new
                         DialogInterface.OnClickListener()

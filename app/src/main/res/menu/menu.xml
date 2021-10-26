@@ -5,12 +5,12 @@
     <item
         android:id="@+id/callCenter"
         android:title="Call Center"
-        android:onClick="CallCenter"/>
+        android:onClick="callCenter"/>
 
     <item
         android:id="@+id/smsCenter"
         android:title="Sms Center"
-        android:onClick="SmsCenter"/>
+        android:onClick="smsCenter"/>
 
     <item
         android:id="@+id/lokasi"

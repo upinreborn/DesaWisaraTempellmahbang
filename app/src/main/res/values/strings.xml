@@ -26,4 +26,6 @@
         <item>@drawable/img_rafting</item>
         <item>@drawable/img_farmfield</item>
     </array>
+
+    <string name="sms">Selamat datang di Desa Wisata Tempellmahbang.</string>
 </resources>
