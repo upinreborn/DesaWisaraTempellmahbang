@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.desawisaratempellmahbang" >
+    package="com.example.desawisaratempellmahbang">
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/drawable"
         android:supportsRtl="true"
-        android:theme="@style/Theme.noActionbar_DesaWisaraTempellmahbang" >
+        android:theme="@style/Theme.noActionbar_DesaWisaraTempellmahbang">
+        <activity
+            android:name=".update_user"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.actionbar_DesaWisaraTempellmahbang"/>
+            android:theme="@style/Theme.actionbar_DesaWisaraTempellmahbang" />
         <activity
             android:name=".registerUser"
             android:exported="true" />

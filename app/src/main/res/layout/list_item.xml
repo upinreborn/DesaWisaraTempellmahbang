@@ -8,29 +8,31 @@
     <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/tourImage"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"/>
-    <TextView
-        android:layout_below="@+id/tourImage"
-        android:textColor="@color/green_700"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:text="News"
-        android:padding="8dp"
-        style="@style/TextAppearance.AppCompat.Subhead" />
 
-    <TextView
-        android:id="@+id/price"
-        style="@style/TextAppearance.AppCompat.Subhead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:padding="8dp"
-        android:text="Info Place Holder" />
+        <ImageView
+            android:id="@+id/tourImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tourImage"
+            android:padding="8dp"
+            android:text="News"
+            android:textColor="@color/green_700" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:padding="8dp"
+            android:text="Info Place Holder" />
 </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Desa Wisata Tempellmahbang</string>
+    <string name="desc_dokar">In the Dokar Village Tour package, tourists can explore the Tempellmahbang Tourism Village area for one to two hours. The price for this package is IDR 150,000 per person. The price includes facilities in the form of gig transportation equipment, guides, as well as donations for tourist villages. If you want to join this package, the minimum number of participants is two people. By following this package, visitors can find out about the daily lives of local residents as well as add new experiences about various things, ranging from customs, traditions, to the tumpengsari farming system. Guided by a guide, visitors will visit the location of home industry and agro-agriculture and learn to play gamelan. In addition, tourists can also pick fruits that are in season to be used as souvenirs. Prices above do not include food. Visitors only get traditional snacks. If you want an additional lunch, visitors can add a fee of IDR 200,000 per person.</string>
 
     <string-array name="tour_packages">
         <item>Dokar village tour</item>
@@ -27,5 +28,4 @@
         <item>@drawable/img_farmfield</item>
     </array>
 
-    <string name="sms">Selamat datang di Desa Wisata Tempellmahbang.</string>
 </resources>

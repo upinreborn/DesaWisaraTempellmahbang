@@ -81,10 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void smsCenter(MenuItem item) {
         Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "+6289683629107"));
-        smsIntent.putExtra("sms_body", R.string.sms);
+        smsIntent.putExtra("sms_body", "Halo admin, saya perlu bantuan");
         startActivity(smsIntent);
     }
 
     public void setting(MenuItem item) {
+        Intent update = new Intent(this, update_user.class);
+        startActivity(update);
+    }
+
+
+    public void logout(MenuItem item) {
+        Intent update = new Intent(this, loginUser.class);
+        startActivity(update);
+        finish();
     }
 }

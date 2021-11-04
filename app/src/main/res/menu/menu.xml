@@ -22,4 +22,9 @@
         android:title="Account Setting"
         android:onClick="setting"/>
 
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        android:onClick="logout"/>
+
 </menu>

@@ -1,11 +1,18 @@
 package com.example.desawisaratempellmahbang;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -57,6 +64,7 @@ public class TourAdapter extends
             mPriceText.setText(String.valueOf(currentTour.getPrice()));
             Glide.with(mContext).load(currentTour.getImageResource()).into(mToursImage);
         }
+
         @Override
         public void onClick(View view) {
             Tour currentTour = mToursData.get(getAdapterPosition());
