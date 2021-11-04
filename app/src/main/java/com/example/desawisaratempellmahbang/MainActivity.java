@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Location(MenuItem item) {
-        Uri gmmIntentUri = Uri.parse("geo:-7.0509802,110.3615234");
+        Uri gmmIntentUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=Rumah+Alfin,+Jl.+Sadeng+II,+Sadeng,+Kec.+Gn.+Pati,+Kota+Semarang,+Jawa+Tengah+50222");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
