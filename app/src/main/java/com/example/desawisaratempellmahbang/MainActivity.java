@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         mSportsData = new ArrayList<>();
         mAdapter = new TourAdapter(this, mSportsData, findViewById(R.id.totalPrice));
@@ -49,11 +49,12 @@ public class MainActivity extends AppCompatActivity {
     private void initializeData() {
         String[] toursName = getResources().getStringArray(R.array.tour_packages);
         String[] toursPrice = getResources().getStringArray(R.array.tours_price);
+        String[] toursDescription = getResources().getStringArray(R.array.tours_description);
         TypedArray tourImagesResources =
                 getResources().obtainTypedArray(R.array.tour_images);
         mSportsData.clear();
         for (int i = 0; i < toursName.length; i++) {
-            mSportsData.add(new Tour(toursName[i], Integer.parseInt(toursPrice[i]), tourImagesResources.getResourceId(i, 0)));
+            mSportsData.add(new Tour(toursName[i], toursDescription[i], Integer.parseInt(toursPrice[i]), tourImagesResources.getResourceId(i, 0)));
         }
         tourImagesResources.recycle();
         mAdapter.notifyDataSetChanged();

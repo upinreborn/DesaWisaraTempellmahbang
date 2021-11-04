@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.noActionbar_DesaWisaraTempellmahbang">
         <activity
+            android:name=".product_detail"
+            android:exported="true" />
+        <activity
             android:name=".update_user"
             android:exported="true" />
         <activity

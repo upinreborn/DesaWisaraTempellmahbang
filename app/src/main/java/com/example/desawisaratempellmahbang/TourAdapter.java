@@ -48,28 +48,42 @@ public class TourAdapter extends
     public int getItemCount() {
         return mToursData.size();
     }
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+    class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mNameText;
         private TextView mPriceText;
-        private ImageView mToursImage;
+        private ImageView mTourImage;
+
         ViewHolder(View itemView) {
             super(itemView);
             mNameText = (TextView)itemView.findViewById(R.id.name);
             mPriceText = (TextView)itemView.findViewById(R.id.price);
-            mToursImage = itemView.findViewById(R.id.tourImage);
-            itemView.setOnClickListener(this);
+            mTourImage = itemView.findViewById(R.id.tourImage);
+            mTourImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Tour currentTour = mToursData.get(getAdapterPosition());
+                    price += currentTour.getPrice();
+                    mTotalPriceText.get().setText("TOTAL = " + String.valueOf(price));
+                }
+            });
+            mNameText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Tour currentTour = mToursData.get(getAdapterPosition());
+                    Intent intent = new Intent(mContext, product_detail.class);
+                    intent.putExtra("productName", currentTour.getName());
+                    intent.putExtra("productDescription", currentTour.getDescription());
+                    intent.putExtra("productImage", currentTour.getImageResource());
+                    mContext.startActivity(intent);
+                }
+            });
         }
+
         void bindTo(Tour currentTour){
             mNameText.setText(currentTour.getName());
             mPriceText.setText(String.valueOf(currentTour.getPrice()));
-            Glide.with(mContext).load(currentTour.getImageResource()).into(mToursImage);
-        }
-
-        @Override
-        public void onClick(View view) {
-            Tour currentTour = mToursData.get(getAdapterPosition());
-            price += currentTour.getPrice();
-            mTotalPriceText.get().setText("TOTAL = " + String.valueOf(price));
+            Glide.with(mContext).load(currentTour.getImageResource()).into(mTourImage);
         }
     }
 }
