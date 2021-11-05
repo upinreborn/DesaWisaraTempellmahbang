@@ -10,25 +10,29 @@
         android:id="@+id/splashScreen"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/drawable" />
 
     <TextView
-        android:layout_width="250dp"
+        android:id="@+id/namadesawisata"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/progressBar"
         android:layout_centerHorizontal="true"
-        android:text="DESA WISATA TEMPELLMAHBANG"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="-50dp"
+        android:layout_below="@id/splashScreen"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="@string/desa_wisata_tempellmahbang"
         android:textAlignment="center"
         android:textColor="@color/green_700"
-        android:textSize="16dp"
-        android:layout_marginBottom="15dp"/>
+        android:textSize="16dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
+        android:layout_below="@id/namadesawisata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/splashScreen"
         android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>

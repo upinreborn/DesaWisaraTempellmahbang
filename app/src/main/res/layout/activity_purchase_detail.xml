@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".purchase_detail"
+    android:layout_margin="5sp">
+
+    <ImageView
+        android:id="@+id/logoPurchase"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/drawable"/>
+
+    <TextView
+        android:id="@+id/tview"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="@string/desa_wisata_tempellmahbang"
+        android:textAlignment="center"
+        android:textColor="@color/green_700"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/totaloayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tview"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="Total Payment"
+        android:textColor="@color/green_500"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/totalpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totaloayment"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="0"
+        android:textColor="@color/green_500"
+        android:textSize="30dp" />
+
+</RelativeLayout>
