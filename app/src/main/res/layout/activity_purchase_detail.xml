@@ -70,6 +70,7 @@
         android:layout_centerHorizontal="true"
         android:inputType="number"
         android:text="0"
+        android:fontFamily="@font/highland_gothic_light"
         android:textAlignment="center"
         android:textColor="@color/green_700"
         android:textSize="30dp" />
