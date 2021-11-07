@@ -35,7 +35,7 @@
         android:layout_below="@id/tview"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/highland_gothic_light"
-        android:text="Total Payment"
+        android:text="purchase amount"
         android:textColor="@color/green_500"
         android:textSize="30dp" />
 
@@ -44,6 +44,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/totaloayment"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="0"
+        android:textColor="@color/green_500"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalpayment"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="amount paid"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/green_500"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/jumlahdibayar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tview2"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/green_700"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jumlahdibayar"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/highland_gothic_light"
+        android:text="charge"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/green_500"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tview3"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/highland_gothic_light"
         android:text="0"
