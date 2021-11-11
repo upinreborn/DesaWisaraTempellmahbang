@@ -34,6 +34,14 @@ public class registerUser extends AppCompatActivity {
         EditText eFullname = findViewById(R.id.eFullname);
         Button btnSignup = findViewById(R.id.btnsignup);
 
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent login = new Intent(registerUser.this, loginUser.class);
+                startActivity(login);
+            }
+        });
+
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
